@@ -9,7 +9,8 @@ export default function Home() {
 
   const generateQRCode = async () => {
     try {
-      const url = `${window.location.origin}/review`;
+      const restaurantId = 'Antollios21'; // In a real app, this would be dynamically generated
+      const url = `${window.location.origin}/${restaurantId}`;
       const qrCodeDataUrl = await QRCode.toDataURL(url);
       setQrCodeUrl(qrCodeDataUrl);
     } catch (error) {
@@ -21,7 +22,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center">
       <Card className="max-w-md w-full">
         <CardHeader className="flex justify-center">
-          <h1 className="text-2xl font-bold">QR Code Review Generator</h1>
+          <h1 className="text-2xl font-bold">QR Code Restaurant Review Generator</h1>
         </CardHeader>
         <CardBody className="flex flex-col items-center">
           <Button onClick={generateQRCode} color="primary" className="mb-4">
