@@ -4,13 +4,13 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { Card, CardBody, CardHeader, Button } from '@nextui-org/react';
 import { Restaurant } from '../types';
-import resImag from "../assets/img1121.jpg"
+import resImag from "../assets/hotel.jpg"
 import Image from 'next/image';
 
 // Mock data (replace with actual data fetching in a real app)
 const restaurant: Restaurant = {
-  id: '1',
-  name: 'Antollios Restaurant',
+  id: 'Watercress',
+  name: 'Watercress hotel',
   logo: "resImag",
 };
 
