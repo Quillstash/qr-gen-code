@@ -10,7 +10,11 @@ export default function Home() {
   const generateQRCode = async () => {
     try {
       const restaurantId = 'Watercress'; // In a real app, this would be dynamically generated
-      const url = `${window.location.origin}/${restaurantId}`;
+      const url = `${window.location.origin}/${restaurantId}`
+      
+      // My portfolio qr code
+      // const portfolioQr = "https://ibrahim.quillstash.com"
+      
       const qrCodeDataUrl = await QRCode.toDataURL(url);
       setQrCodeUrl(qrCodeDataUrl);
     } catch (error) {
